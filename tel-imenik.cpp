@@ -47,6 +47,24 @@ int main()
         }
         else if( izbor == 3 )
         {
+            unsigned long long int brtelefona;
+            cout << "Unesite broj telefona kojeg zelite pronaci: ";
+            cin >> brtelefona;
+            bool postoji=false;
+            for(int i=0; i<brojOsoba; i++)
+            {
+                if(brtelefona==brTelefona[i])
+                {
+                    cout << "Postoji u imeniku" <<endl;
+                    postoji=true;
+                    cout << prezimeIme[i] << "\t" << brTelefona[i] << "\t" << adresa[i]  << endl;
+                    break;
+                }
+            }
+            if(postoji==false)
+            {
+                cout << "Ne postoji" << endl;
+            }
         }
         else if( izbor == 4 )
         {
